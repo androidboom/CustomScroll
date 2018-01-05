@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.lb.customscroll.MyScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rl"
+        android:orientation="vertical"
+        android:background="@color/colorPrimary">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/search_et"
+            android:layout_margin="5dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_border"
+            android:hint="请输入要搜索的内容"/>
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:id="@+id/tv_left"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/search_et"
+            android:layout_toLeftOf="@+id/center"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="5dp"
+            android:text="拍照"
+            android:textSize="15sp"
+            android:textColor="@color/dividing_light"
+            android:background="@color/colorPrimaryDark" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:id="@+id/tv_right"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/search_et"
+            android:layout_toRightOf="@+id/center"
+            android:gravity="right|center_vertical"
+            android:paddingRight="5dp"
+            android:text="搜索"
+            android:textSize="15sp"
+            android:textColor="@color/dividing_light"
+            android:background="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/center"
+            android:layout_below="@+id/search_et"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/iv_left"
+            android:layout_toLeftOf="@+id/center"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/ic_camera_alt_black_24dp"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/iv_right"
+            android:layout_toRightOf="@+id/center"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/ic_search_black_24dp"/>
+
+    </RelativeLayout>
+
+</com.lb.customscroll.MyScrollView>
