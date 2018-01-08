@@ -231,12 +231,12 @@ public class MyScrollView extends ScrollView {
     private void measureiv_left(int headerViewHeight) {
         int rule = search_et_maxWidth / 2 - center_maxWidth / 2 - iv_left_maxWidth;
         int start = headerViewHeight * 3 - 1050;
-        if (start > rule){
-            start = rule;
+        if (start > 0){
+            start = 0;
         }else if(start < -rule){
             start = -rule;
         }
-        ObjectAnimator oax = ObjectAnimator.ofFloat(iv_left, "translationX",start);
+        ObjectAnimator oax = ObjectAnimator.ofFloat(iv_left, "translationX",iv_left.getTranslationY(),start);
         ObjectAnimator oay = ObjectAnimator.ofFloat(iv_left, "translationY",0);
         oax.setDuration(0);
         oay.setDuration(0);
@@ -251,10 +251,10 @@ public class MyScrollView extends ScrollView {
         int start = - (headerViewHeight * 3 - 1050);
         if (start > rule){
             start = rule;
-        }else if(start < -rule){
-            start = -rule;
+        }else if(start < 0){
+            start = 0;
         }
-        ObjectAnimator oax = ObjectAnimator.ofFloat(iv_right, "translationX",start);
+        ObjectAnimator oax = ObjectAnimator.ofFloat(iv_right, "translationX",iv_right.getTranslationY(),start);
         ObjectAnimator oay = ObjectAnimator.ofFloat(iv_right, "translationY",0);
         oax.setDuration(0);
         oay.setDuration(0);
